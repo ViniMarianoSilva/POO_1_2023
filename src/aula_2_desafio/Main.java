@@ -16,14 +16,14 @@ public class Main {
             op = Integer.parseInt(JOptionPane.showInputDialog(menu));
             if (op == 1) {
                 Carro c = new Carro();
-                c.cadastra("", 0, "");
+                c.cadastra();
                 carros.add(c);
             } else if (op == 2) {
                 int anoInicial = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o ano incial: "));
                 int anoFinal = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o ano final: "));
                 for (Carro c : carros) {
-                    if (anoFinal <= c.anoFabricacao || anoInicial >= c.anoFabricacao) {
-                        JOptionPane.showInputDialog("Estes são os automóveis listados: ");
+                    if (c.anoFabricacao <= anoFinal && c.anoFabricacao >= anoInicial) {
+                        JOptionPane.showMessageDialog(null,"Estes são os automóveis listados: ");
                         c.listarDados();
                     }
                 }

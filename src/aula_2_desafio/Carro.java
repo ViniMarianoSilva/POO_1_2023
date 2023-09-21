@@ -7,10 +7,10 @@ public class Carro {
     int anoFabricacao;
     String marca;
 
-    void cadastra(String marca, int anoFabricacao, String cor) {
-        this.marca = JOptionPane.showInputDialog("Informe a marca do automóvel : ");
-        this.anoFabricacao = Integer.parseInt(JOptionPane.showInputDialog("Informe o ano de fabricação do automóvel: "));
-        this.cor = JOptionPane.showInputDialog("Informe a cor de seu automóvel: ");
+    void cadastra() {
+        marca = JOptionPane.showInputDialog("Informe a marca do automóvel : ");
+        anoFabricacao = Integer.parseInt(JOptionPane.showInputDialog("Informe o ano de fabricação do automóvel: "));
+        cor = JOptionPane.showInputDialog("Informe a cor de seu automóvel: ");
     }
     void listarDados(){
         JOptionPane.showMessageDialog(null, "Marca: " + marca + "\n" +
